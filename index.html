@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TORRE MÉDICA H</title>
+    <link rel="stylesheet" href="./css/index.css"
+</head>
+<body>
+    <body>
+        <nav class="navbar">
+          <div class="menu-icon" onclick="toggleMenu()">☰</div>
+          <div class="logo"><img src="./images/logo.png"></div>
+        </nav>
+      
+        <div id="menu" class="dropdown-menu">
+          <ul>
+            <li onclick="showTable('table1'), showForm('form1')">Opción 1</li>
+            <li onclick="showTable('table2')">Opción 2</li>
+            <li onclick="showTable('table3')">Opción 3</li>
+          </ul>
+        </div>
+      
+        <div class="table-container">
+          <div id="table1-container" style="display: none;">
+            <button class="popup-btn" onclick="openPopup('popup1')">Registro Medicos</button>
+            <table id="table1" class="data-table">
+              <tr>
+              <th>
+                <span> NOMBRE</span>
+              </th>
+              <th>
+                <span> APELLIDO</span>
+              </th>
+              <th>
+                <span> ESPECIALIDAD</span>
+              </th>
+            </table>
+          </div>
+      
+          <div id="table2-container" style="display: none;">
+            <button class="popup-btn" onclick="openPopup('popup2')">Registro Pacientes</button>
+            <table id="table2" class="data-table">
+              <tr>
+              <th>
+                <span> NOMBRE</span>
+              </th>
+              <th>
+                <span> APELLIDO</span>
+              </th>
+              <th>
+                <span> TELEFONO</span>
+              </th>
+              <th>
+                <span> TELEFONO DE EMERGENCIA
+                </span>
+              </th>
+            </tr>
+            </table>
+          </div>
+      
+          <div id="table3-container" style="display: none;">
+            <button class="popup-btn" onclick="openPopup('popup3')">Registro Citas</button>
+            <table id="table3" class="data-table">
+              <tr>
+              <th>
+                <span> NOMBRE</span>
+              </th>
+              <th>
+                <span> APELLIDO</span>
+              </th>
+              <th>
+                <span> TELEFONO</span>
+              </th>
+              <th>
+                <span> CONSULTORIO</span>
+              </th>
+            </tr>
+            </table>
+          </div>
+      
+
+       
+ <!-- Pop-up Formulario Opción 1 -->
+ <div id="popup1" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <h2>MEDICO</h2>
+    <form>
+      <label for="nombre1">Nombre:</label>
+      <input type="text" id="nombre1" name="nombre1" required><br><br>
+
+      <label for="apellido1">Apellido:</label>
+      <input type="text" id="apellido1" name="apellido1" required><br><br>
+
+      <label for="Especialidad">Especialidad</label>
+      <select name="especialidad" id="especialidad">
+        <option value="General">General</option>
+        <option value="Pediatra">Pediatra</option>
+        <option value="Dentista">Dentista</option>
+      </select><br><br>
+      <button type="submit">REGISTRAR</button>
+    </form>
+  </div>
+ </div>
+
+
+  <!-- Pop-up Formulario Opción 1 -->
+ <div id="popup1" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <h2>PACIENTES</h2>
+    <form>
+      <label for="nombre2">Nombre:</label>
+      <input type="text" id="nombre2" name="nombre2" required><br><br>
+
+      <label for="apellido2">Apellido:</label>
+      <input type="text" id="apellido2" name="apellido2" required><br><br>
+
+      <label for="telefono2">Teléfono:</label>
+      <input type="tel" id="telefono2" name="telefono2" required><br><br>
+      
+      <P> CONTACTO DE EMERGENCIA<P>
+      <label for="telefonoE">Teléfono:</label>
+      <input type="tel" id="telefonoE" name="telefonoE" required><br><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+ </div>
+  
+  <!-- Pop-up Formulario Opción 1 -->
+ <div id="popup1" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <h2>CITAS</h2>
+    <form>
+    <label for="nombre3">Nombre:</label>
+    <input type="text" id="nombre3" name="nombre3" required><br><br>
+
+    <label for="apellido3">Apellido:</label>
+    <input type="text" id="apellido3" name="apellido3" required><br><br>
+
+    <label for="telefono3">Teléfono:</label>
+    <input type="tel" id="telefono3" name="telefono3" required><br><br>
+
+      <label for="consultorio">Consultorio</label>
+      <select name="consultorio" id="consultorio">
+        <option value="1">1 General</option>
+        <option value="2">2 Pediatrico</option>
+        <option value="3">3 Dentista</option>
+      </select><br><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+ </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
