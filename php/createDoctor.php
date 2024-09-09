@@ -26,12 +26,12 @@ try{
         $id_especialidad = $row['id_especialidad']; 
     
     }else{
-        // echo "<script>
-        // alert('La especialidad no existe.');
-        // window.location = '../index.html';
-        // </script>";
+        echo "<script>
+        alert('La especialidad no existe.');
+        window.location = '../index.html';
+        </script>";
           // Este echo está colocado únicamente para las pruebas de funcionalidad del sistema 
-        throw new Exception("Especialidad no encontrada");
+        //throw new Exception("Especialidad no encontrada");
     }
     $stmt->close();
 

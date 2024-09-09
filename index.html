@@ -110,7 +110,7 @@
   <div class="popup-content">
     <span class="close" onclick="closePopup()">&times;</span>
     <h2>PACIENTES</h2>
-    <form>
+    <form action="/php/createPatient.php" method="POST" enctype="multipart/form-data">
       <label for="nombre2">Nombre:</label>
       <input type="text" id="nombre2" name="nombre2" required><br><br>
 
@@ -134,7 +134,8 @@
   <div class="popup-content">
     <span class="close" onclick="closePopup()">&times;</span>
     <h2>CITAS</h2>
-    <form>
+    <h3>Ingrese los datos del paciente</h3>
+    <form action="/php/createAppointment.php" method="POST" enctype="multipart/form-data" >
     <label for="nombre3">Nombre:</label>
     <input type="text" id="nombre3" name="nombre3" required><br><br>
 
@@ -143,7 +144,6 @@
 
     <label for="hora">Selecciona una hora:</label>
     <input type="time" id="hora" name="hora" min="09:00" max="18:00" required>
-    <input type="submit" value="Enviar"><br><br>
 
     <label for="fecha_cita">Seleccionar día de la cita:</label>
     <input type="date" id="fecha_cita" name="fecha_cita" required>
