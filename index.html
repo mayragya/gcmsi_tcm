@@ -86,7 +86,7 @@
   <div class="popup-content">
     <span class="close" onclick="closePopup()">&times;</span>
     <h2>MEDICO</h2>
-    <form>
+    <form action="/php/createDoctor.php" method="POST" enctype="multipart/form-data">
       <label for="nombre1">Nombre:</label>
       <input type="text" id="nombre1" name="nombre1" required><br><br>
 
@@ -95,9 +95,9 @@
 
       <label for="Especialidad">Especialidad</label>
       <select name="especialidad" id="especialidad">
-        <option value="General">General</option>
-        <option value="Pediatra">Pediatra</option>
-        <option value="Dentista">Dentista</option>
+        <option value="1">General</option>
+        <option value="2">Pediatra</option>
+        <option value="3">Dentista</option>
       </select><br><br>
       <button type="submit">REGISTRAR</button>
     </form>
@@ -106,7 +106,7 @@
 
 
   <!-- Pop-up Formulario Opción 1 -->
- <div id="popup1" class="popup">
+ <div id="popup2" class="popup">
   <div class="popup-content">
     <span class="close" onclick="closePopup()">&times;</span>
     <h2>PACIENTES</h2>
@@ -130,7 +130,7 @@
  </div>
   
   <!-- Pop-up Formulario Opción 1 -->
- <div id="popup1" class="popup">
+ <div id="popup3" class="popup">
   <div class="popup-content">
     <span class="close" onclick="closePopup()">&times;</span>
     <h2>CITAS</h2>
@@ -141,14 +141,18 @@
     <label for="apellido3">Apellido:</label>
     <input type="text" id="apellido3" name="apellido3" required><br><br>
 
-    <label for="telefono3">Teléfono:</label>
-    <input type="tel" id="telefono3" name="telefono3" required><br><br>
+    <label for="hora">Selecciona una hora:</label>
+    <input type="time" id="hora" name="hora" min="09:00" max="18:00" required>
+    <input type="submit" value="Enviar"><br><br>
+
+    <label for="fecha_cita">Seleccionar día de la cita:</label>
+    <input type="date" id="fecha_cita" name="fecha_cita" required>
 
       <label for="consultorio">Consultorio</label>
       <select name="consultorio" id="consultorio">
-        <option value="1">1 General</option>
-        <option value="2">2 Pediatrico</option>
-        <option value="3">3 Dentista</option>
+        <option value="1">General</option>
+        <option value="2">Pediatrico</option>
+        <option value="3">Dentista</option>
       </select><br><br>
 
       <button type="submit">Enviar</button>
