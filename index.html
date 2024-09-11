@@ -10,14 +10,14 @@
     <body>
         <nav class="navbar">
           <div class="menu-icon" onclick="toggleMenu()">☰</div>
-          <div class="logo"><img src="./images/logo.png"></div>
+          <div class="logo"><img src="./images/logo.jpeg"></div>
         </nav>
       
         <div id="menu" class="dropdown-menu">
           <ul>
-            <li onclick="showTable('table1'), showForm('form1')">Opción 1</li>
-            <li onclick="showTable('table2')">Opción 2</li>
-            <li onclick="showTable('table3')">Opción 3</li>
+            <li onclick="showTable('table1')">Medicos</li>
+            <li onclick="showTable('table2')">Pacientes</li>
+            <li onclick="showTable('table3')">Citas</li>
           </ul>
         </div>
       
@@ -26,6 +26,10 @@
             <button class="popup-btn" onclick="openPopup('popup1')">Registro Medicos</button>
             <table id="table1" class="data-table">
               <tr>
+                <thead>
+                  <th>
+                    <span>NO.</span>
+                  </th>
               <th>
                 <span> NOMBRE</span>
               </th>
@@ -35,6 +39,11 @@
               <th>
                 <span> ESPECIALIDAD</span>
               </th>
+             </tr> 
+            </thead>
+            <tbody id="printDoctores">
+              <script src="/js/loadData.js"></script>
+            </tbody>
             </table>
           </div>
       
@@ -42,7 +51,11 @@
             <button class="popup-btn" onclick="openPopup('popup2')">Registro Pacientes</button>
             <table id="table2" class="data-table">
               <tr>
-              <th>
+                <thead>
+                  <th>
+                    <span>ID</span>
+                  </th>
+                <th>
                 <span> NOMBRE</span>
               </th>
               <th>
@@ -56,6 +69,10 @@
                 </span>
               </th>
             </tr>
+          </thead>
+          <tbody id="printPatient">
+            <script src="/js/loadPatient.js"></script>
+          </tbody>
             </table>
           </div>
       
@@ -87,6 +104,8 @@
     <span class="close" onclick="closePopup()">&times;</span>
     <h2>MEDICO</h2>
     <form action="/php/createDoctor.php" method="POST" enctype="multipart/form-data">
+      <label for="nombre1">Nombre:</label>
+      <input type="text" id="nombre1" name="nombre1" required><br><br>
       <label for="nombre1">Nombre:</label>
       <input type="text" id="nombre1" name="nombre1" required><br><br>
 
@@ -159,6 +178,56 @@
     </form>
   </div>
  </div>
+
+ <!-- Teclado Virtual -->
+<div id="virtualKeyboard" class="keyboard" style="display: none;">
+  <div class="keyboard-row">
+      <button onclick="insertCharacter('1')">1</button>
+      <button onclick="insertCharacter('2')">2</button>
+      <button onclick="insertCharacter('3')">3</button>
+      <button onclick="insertCharacter('4')">4</button>
+      <button onclick="insertCharacter('5')">5</button>
+      <button onclick="insertCharacter('6')">6</button>
+      <button onclick="insertCharacter('7')">7</button>
+      <button onclick="insertCharacter('8')">8</button>
+      <button onclick="insertCharacter('9')">9</button>
+      <button onclick="insertCharacter('0')">0</button>
+      <button onclick="backspace()">⌫</button>
+  </div>
+  <div class="keyboard-row">
+      <button onclick="insertCharacter('Q')">Q</button>
+      <button onclick="insertCharacter('W')">W</button>
+      <button onclick="insertCharacter('E')">E</button>
+      <button onclick="insertCharacter('R')">R</button>
+      <button onclick="insertCharacter('T')">T</button>
+      <button onclick="insertCharacter('Y')">Y</button>
+      <button onclick="insertCharacter('U')">U</button>
+      <button onclick="insertCharacter('I')">I</button>
+      <button onclick="insertCharacter('O')">O</button>
+      <button onclick="insertCharacter('P')">P</button>
+  </div>
+  <div class="keyboard-row">
+      <button onclick="insertCharacter('A')">A</button>
+      <button onclick="insertCharacter('S')">S</button>
+      <button onclick="insertCharacter('D')">D</button>
+      <button onclick="insertCharacter('F')">F</button>
+      <button onclick="insertCharacter('G')">G</button>
+      <button onclick="insertCharacter('H')">H</button>
+      <button onclick="insertCharacter('J')">J</button>
+      <button onclick="insertCharacter('K')">K</button>
+      <button onclick="insertCharacter('L')">L</button>
+  </div>
+  <div class="keyboard-row">
+      <button onclick="insertCharacter('Z')">Z</button>
+      <button onclick="insertCharacter('X')">X</button>
+      <button onclick="insertCharacter('C')">C</button>
+      <button onclick="insertCharacter('V')">V</button>
+      <button onclick="insertCharacter('B')">B</button>
+      <button onclick="insertCharacter('N')">N</button>
+      <button onclick="insertCharacter('M')">M</button>
+      <button onclick="insertCharacter(' ')">Espacio</button>
+  </div>
+</div>
 
     <script src="./js/index.js"></script>
 </body>
