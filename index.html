@@ -42,7 +42,7 @@
              </tr> 
             </thead>
             <tbody id="printDoctores">
-              <script src="/js/loadData.js"></script>
+            <!-- aqui se imprimen los doctores registrados en la bd -->
             </tbody>
             </table>
           </div>
@@ -71,7 +71,7 @@
             </tr>
           </thead>
           <tbody id="printPatient">
-            <script src="/js/loadPatient.js"></script>
+           <!-- aqui se imprimen los pacientes registrados en la bd -->
           </tbody>
             </table>
           </div>
@@ -80,6 +80,9 @@
             <button class="popup-btn" onclick="openPopup('popup3')">Registro Citas</button>
             <table id="table3" class="data-table">
               <tr>
+                <th>
+                  <span> No. CITA</span>
+                </th>
               <th>
                 <span> NOMBRE</span>
               </th>
@@ -92,7 +95,16 @@
               <th>
                 <span> CONSULTORIO</span>
               </th>
+              <th>
+                <span>HORA</span>
+              </th>
+              <th>
+                <span>FECHA</span>
+              </th>
             </tr>
+            <tbody id="printAppointment">
+              <!-- aqui se imprimen las citas registradas en la bd -->
+            </tbody>
             </table>
           </div>
       
@@ -229,6 +241,7 @@
   </div>
 </div>
 
+    <script src="/js/loadData.js"></script>
     <script src="./js/index.js"></script>
 </body>
 </html>
