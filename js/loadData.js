@@ -29,7 +29,20 @@ async function loadPatient(){
         console.error('Error fetching pacientes:', error);
     }
 }
+ 
 
+async function loadAppointment(){
+    try {
+        const response = await fetch('../php/getAppointment.php');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        citas = await response.json();
+        drawTableAppointment();
+    } catch (error) {
+        console.error('Error fetching citas:', error);
+    }
+}
 
 function drawTableDoctor() {
     const tbody = document.getElementById("printDoctores");
@@ -65,7 +78,29 @@ function drawTablePatient(){
 
 }
 
+function drawTableAppointment(){
+    const tbody = document.getElementById("printAppointment"); 
+    tbody.innerHTML = ''; 
+
+    citas.forEach(cita => {
+        const tr = document.createElement("tr"); 
+        tr.innerHTML = `
+        <td>${cita.id_cita}</td>
+        <td>${cita.name}</td>
+        <td>${cita.lastname}</td>
+        <td>${cita.phoneNumber}</td>
+        <td>${cita.name_especialidad}</td>
+        <td>${cita.hora_cita}</td>
+        <td>${cita.fecha_cita}</td>`;
+
+        tbody.appendChild(tr); 
+
+    }); 
+
+}
+
 
 // Cargar datos y dibujar la tabla inicial
 loadDoctores();
 loadPatient(); 
+loadAppointment();
