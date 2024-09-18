@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="../css/index.css">
+
+<div class="table-container">
+    <div id="table2-container">
+        <button class="popup-btn" onclick="openPopup('popup2')">Registro Pacientes</button>
+        <button class="popup-btn" onclick="openPopup('popupE2')">Edicion</button>
+        <table id="table2" class="data-table">
+          <tr>
+            <thead>
+              <th>
+                <span>ID</span>
+              </th>
+            <th>
+            <span> NOMBRE</span>
+          </th>
+          <th>
+            <span> APELLIDO</span>
+          </th>
+          <th>
+            <span> TELEFONO</span>
+          </th>
+          <th>
+            <span> TELEFONO DE EMERGENCIA
+            </span>
+          </th>
+        </tr>
+      </thead>
+      <tbody id="printPatient">
+       <!-- aqui se imprimen los pacientes registrados en la bd -->
+      </tbody>
+        </table>
+      </div>
+
+      <!-- Pop-up Formulario Registro -->
+ <div id="popup2" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <h2>PACIENTES</h2>
+    <form action="/php/createPatient.php" method="POST" enctype="multipart/form-data">
+      <label for="nombre2">Nombre:</label>
+      <input type="text" id="nombre2" name="nombre2" required><br><br>
+
+      <label for="apellido2">Apellido:</label>
+      <input type="text" id="apellido2" name="apellido2" required><br><br>
+
+      <label for="telefono2">Teléfono:</label>
+      <input type="tel" id="telefono2" name="telefono2" required><br><br>
+      
+      <P> CONTACTO DE EMERGENCIA<P>
+      <label for="telefonoE">Teléfono:</label>
+      <input type="tel" id="telefonoE" name="telefonoE" required><br><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+ </div>
+ 
+
+
+  <!-- Pop-up Formulario Edicion -->
+  <div id="popupE2" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2>PACIENTES EDICION</h2>
+      <form action="/php/createPatient.php" method="POST" enctype="multipart/form-data">
+        <label for="nombre2">Nombre:</label>
+        <input type="text" id="nombre2" name="nombre2" required><br><br>
+  
+        <label for="apellido2">Apellido:</label>
+        <input type="text" id="apellido2" name="apellido2" required><br><br>
+  
+        <label for="telefono2">Teléfono:</label>
+        <input type="tel" id="telefono2" name="telefono2" required><br><br>
+        
+        <P> CONTACTO DE EMERGENCIA<P>
+        <label for="telefonoE">Teléfono:</label>
+        <input type="tel" id="telefonoE" name="telefonoE" required><br><br>
+  
+        <button type="submit">Edicion</button>
+      </form>
+    </div>
+   </div>
+ 
+    <script src="../js/index.js"></script>
