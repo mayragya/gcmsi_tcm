@@ -92,6 +92,7 @@ function drawTableAppointment(){
         <td>${cita.name_especialidad}</td>
         <td>${cita.hora_cita}</td>
         <td>${cita.fecha_cita}</td>`;
+        
 
         tbody.appendChild(tr); 
 
