@@ -39,7 +39,6 @@ if($conn->connect_error){
                 //devolver datos en formato json
                 header('Content-Type: application/json'); 
                 echo json_encode($citas);
-
 }
 
 

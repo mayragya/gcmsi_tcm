@@ -1,9 +1,9 @@
-<link rel="stylesheet" href="../css/index.css">
+<!-- <link rel="stylesheet" href="../css/index.css"> -->
 <section>
 <div class="table-container">
     <div id="table3-container">
         <button class="popup-btn" onclick="openPopup('popup3')">Registro Citas</button>
-        <button class="popup-btn" onclick="openPopup('popupE3')">Edicion</button>
+        <!-- <button class="popup-btn" onclick="openPopup('popupE3')">Edicion</button> -->
         <table id="table3" class="data-table">
           <tr>
             <th>
@@ -26,6 +26,9 @@
           </th>
           <th>
             <span>FECHA</span>
+          </th>
+          <th>
+            <span>EDITAR</span>
           </th>
         </tr>
         <tbody id="printAppointment">
@@ -62,38 +65,6 @@
       </select><br><br>
 
       <button type="submit">Enviar</button>
-    </form>
-  </div>
- </div>
-
-
- <!-- Pop-up Formulario Edicion -->
- <div id="popupE3" class="popup">
-  <div class="popup-content">
-    <span class="close" onclick="closePopup()">&times;</span>
-    <h2>CITAS EDICION</h2>
-    <h3>Ingrese los datos del paciente</h3>
-    <form action="/php/createAppointment.php" method="POST" enctype="multipart/form-data" >
-    <label for="nombre3">Nombre:</label>
-    <input type="text" id="nombre3" name="nombre3" required><br><br>
-
-    <label for="apellido3">Apellido:</label>
-    <input type="text" id="apellido3" name="apellido3" required><br><br>
-
-    <label for="hora">Selecciona una hora:</label>
-    <input type="time" id="hora" name="hora" min="09:00" max="18:00" required>
-
-    <label for="fecha_cita">Seleccionar día de la cita:</label>
-    <input type="date" id="fecha_cita" name="fecha_cita" required>
-
-      <label for="consultorio">Consultorio</label>
-      <select name="consultorio" id="consultorio">
-        <option value="1">General</option>
-        <option value="2">Pediatrico</option>
-        <option value="3">Dentista</option>
-      </select><br><br>
-
-      <button type="submit">Edicion</button>
     </form>
   </div>
  </div>

@@ -11,17 +11,17 @@
     <nav>
     
           <ul>
-            <li onclick="loadContent('./html/doctores.html')">DOCTORES</li>
-            <li onclick="loadContent('./html/paciente.html')">PACIENTES</li>
-            <li onclick="loadContent('./html/citas.html')">CITAS</li>
+            <li id="doctorFun" onclick="conectarDoctores()">DOCTORES</li>
+            <li id="pacienteFun" onclick="conectarPaciente()">PACIENTES</li>
+            <li id="citasFun" onclick="conectarCitas()">CITAS</li>
+            <!-- <script src="/js/loadCitas.js"></script> -->
           </ul>
       </nav>   
       
-      <section id="content">
-  
-      </section>
-
-    <script src="/js/loadData.js"></script>
+      <section id="content"></section>
+     
     <script src="./js/index.js"></script>
+    <script src="./js/loadCitas.js"></script>
+    <script src="./js/loadDoctores.js"></script>
 </body>
 </html>

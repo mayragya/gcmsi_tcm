@@ -1,0 +1,36 @@
+
+ <!-- Pop-up Formulario Edicion -->
+ <div id="popupE3" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2>MODIFICAR CITA</h2>
+      <h3>Modifique los datos de la cita</h3>
+      <form action="../php/updateCita.php" method="POST" enctype="multipart/form-data" >
+        
+        <input type="hidden" id="id_cita" name="id_cita">
+
+      <label for="nombre3">Nombre:</label>
+      <input type="text" id="nombre3" name="nombre3" required><br><br>
+        
+      <label for="apellido3">Apellido:</label>
+      <input type="text" id="apellido3" name="apellido3" required><br><br>
+  
+      <label for="hora">Selecciona una hora:</label>
+      <input type="time" id="hora" name="hora" min="09:00" max="18:00" required>
+  
+      <label for="fecha_cita">Seleccionar día de la cita:</label>
+      <input type="date" id="fecha_cita" name="fecha_cita" required>
+        <label for="consultorio">Consultorio</label>
+        <select name="consultorio" id="consultorio">
+          <option value="1">General</option>
+          <option value="2">Pediatrico</option>
+          <option value="3">Dentista</option>
+        </select><br><br>
+        <button type="submit">Actualizar</button>
+        <button type="button" onclick="DeleteAppointment()">Eliminar</button>
+      </form>
+      <script src="../js/populateFormCitas.js"></script>
+      <script src="../js/index.js"></script>
+    </div>
+   </div>
+  
