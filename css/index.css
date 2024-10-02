@@ -86,13 +86,13 @@ nav ul li:active {
   }
   
   .data-table th, .data-table td {
-      font-size: 14px;
-      padding: 6px;
+      font-size: 12px;
+      padding: 2px;
   }
 
   .data-table th span, .data-table td span {
       display: block;
-      font-size: 12px;
+      font-size: 8px;
   }
 }
 
@@ -103,12 +103,12 @@ nav ul li:active {
   }
 
   .data-table th, .data-table td {
-      font-size: 12px;
-      padding: 4px;
+      font-size: 8px;
+      padding: 2px;
   }
 
   .data-table th span, .data-table td span {
-      font-size: 10px;
+      font-size: 8px;
   }
 }
 

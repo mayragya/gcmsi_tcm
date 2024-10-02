@@ -3,7 +3,6 @@
     <div class="table-container">
         <div id="table1-container" >
           <button class="popup-btn" onclick="openPopup('popup1')">Registro Medicos</button>
-          <button class="popup-btn" onclick="openPopup('popupE1')">Edicion</button>
          
           <table id="table1" class="data-table">
             <tr>
@@ -20,6 +19,9 @@
             <th>
               <span> ESPECIALIDAD</span>
             </th>
+            <th>
+              <span>EDITAR</span>
+            </th>
            </tr> 
           </thead>
           <tbody id="printDoctores">
@@ -34,7 +36,7 @@
   <div class="popup-content">
     <span class="close" onclick="closePopup()">&times;</span>
     <h2>MEDICO</h2>
-    <form action="/php/createDoctor.php" method="POST" enctype="multipart/form-data">
+    <form action="../php/createDoctor.php" method="POST" enctype="multipart/form-data">
       <label for="nombre1">Nombre:</label>
       <input type="text" id="nombre1" name="nombre1" required><br><br>
       <label for="nombre1">Nombre:</label>
@@ -50,32 +52,6 @@
         <option value="3">Dentista</option>
       </select><br><br>
       <button type="submit">REGISTRAR</button>
-    </form>
-  </div>
- </div>
-
-
-  <!-- Pop-up Formulario Edicion -->
- <div id="popupE1" class="popup">
-  <div class="popup-content">
-    <span class="close" onclick="closePopup()">&times;</span>
-    <h2>MEDICO EDICION</h2>
-    <form action="/php/createDoctor.php" method="POST" enctype="multipart/form-data">
-      <label for="nombre1">Nombre:</label>
-      <input type="text" id="nombre1" name="nombre1" required><br><br>
-      <label for="nombre1">Nombre:</label>
-      <input type="text" id="nombre1" name="nombre1" required><br><br>
-
-      <label for="apellido1">Apellido:</label>
-      <input type="text" id="apellido1" name="apellido1" required><br><br>
-
-      <label for="Especialidad">Especialidad</label>
-      <select name="especialidad" id="especialidad">
-        <option value="1">General</option>
-        <option value="2">Pediatra</option>
-        <option value="3">Dentista</option>
-      </select><br><br>
-      <button type="submit">Enviar</button>
     </form>
   </div>
  </div>

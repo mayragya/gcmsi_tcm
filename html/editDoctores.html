@@ -1,0 +1,24 @@
+  <!-- Pop-up Formulario Edicion -->
+  <div id="popupE1" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2>MEDICO EDICION</h2>
+      <form action="/php/createDoctor.php" method="POST" enctype="multipart/form-data">
+        <label for="nombre1">Nombre:</label>
+        <input type="text" id="nombre1" name="nombre1" required><br><br>
+        <label for="nombre1">Nombre:</label>
+        <input type="text" id="nombre1" name="nombre1" required><br><br>
+  
+        <label for="apellido1">Apellido:</label>
+        <input type="text" id="apellido1" name="apellido1" required><br><br>
+  
+        <label for="Especialidad">Especialidad</label>
+        <select name="especialidad" id="especialidad">
+          <option value="1">General</option>
+          <option value="2">Pediatra</option>
+          <option value="3">Dentista</option>
+        </select><br><br>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+   </div>
