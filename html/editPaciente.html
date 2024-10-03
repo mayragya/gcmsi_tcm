@@ -5,7 +5,8 @@
   <div class="popup-content">
       <span class="close" onclick="closeE()">&times;</span>
       <h2>EDITAR REGISTRO DE PACIENTES</h2>
-      <form action="" method="POST" enctype="multipart/form-data">
+      <form action="../php/updatePatient.php" method="POST" enctype="multipart/form-data">
+        <input type="hidden" id="id_paciente" name="id_paciente">
         <label for="nombre2">Nombre:</label>
         <input type="text" id="nombre2" name="nombre2" required><br><br>
   
@@ -26,3 +27,4 @@
    </div>
 </section>
 <script src="../js/index.js"></script>
+<script src="../js/populateFormPaciente.js"></script>

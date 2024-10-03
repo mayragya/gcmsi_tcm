@@ -189,10 +189,10 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: greenyellow;
+  background-color: green;
 }
 
-button .Eliminar {
+button[type="button"] {
   padding: 10px 15px;
   background-color: red;
   color: white;
@@ -200,7 +200,7 @@ button .Eliminar {
   cursor: pointer;
 }
 
-button .Eliminar:hover {
+button [type="button"]:hover {
   background-color: rgb(247, 77, 77);
 }
 
