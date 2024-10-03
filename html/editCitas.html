@@ -1,8 +1,9 @@
 
- <!-- Pop-up Formulario Edicion -->
- <div id="popupE3" class="popup">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup()">&times;</span>
+<link rel="stylesheet" href="../css/index.css">
+<section>
+<div  class="popupEdit">
+  <div class="popup-content">
+      <span class="close" onclick="closeE()">&times;</span>
       <h2>MODIFICAR CITA</h2>
       <h3>Modifique los datos de la cita</h3>
       <form action="../php/updateCita.php" method="POST" enctype="multipart/form-data" >
@@ -27,7 +28,7 @@
           <option value="3">Dentista</option>
         </select><br><br>
         <button type="submit">Actualizar</button>
-        <button type="button" onclick="DeleteAppointment()">Eliminar</button>
+        <button type="Eliminar" onclick="DeleteAppointment()">Eliminar</button>
       </form>
       <script src="../js/populateFormCitas.js"></script>
       <script src="../js/index.js"></script>

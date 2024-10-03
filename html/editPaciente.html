@@ -1,10 +1,11 @@
 
-  <!-- Pop-up Formulario Edicion -->
-  <div id="popupE2" class="popup">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup()">&times;</span>
-      <h2>PACIENTES EDICION</h2>
-      <form action="/php/createPatient.php" method="POST" enctype="multipart/form-data">
+<link rel="stylesheet" href="../css/index.css">
+<section>
+<div  class="popupEdit">
+  <div class="popup-content">
+      <span class="close" onclick="closeE()">&times;</span>
+      <h2>EDITAR REGISTRO DE PACIENTES</h2>
+      <form action="" method="POST" enctype="multipart/form-data">
         <label for="nombre2">Nombre:</label>
         <input type="text" id="nombre2" name="nombre2" required><br><br>
   
@@ -18,7 +19,10 @@
         <label for="telefonoE">Teléfono:</label>
         <input type="tel" id="telefonoE" name="telefonoE" required><br><br>
   
-        <button type="submit">Edicion</button>
+        <button type="submit">GUARDAR</button>
+        <button type="button" onclick="DeletePatient()">Eliminar</button>
       </form>
     </div>
    </div>
+</section>
+<script src="../js/index.js"></script>

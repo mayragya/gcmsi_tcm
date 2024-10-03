@@ -37,9 +37,9 @@ function loadContent(files, elementId) { let combinedContent= '';
 }
 
 
-function conectarEditar(){
-  loadContent(['../html/editCitas.html'], 'contentE');
-}
+// function conectarEditar(){
+//   loadContent(['../html/editCitas.html'], 'contentE');
+// }
 
 
 async function loadDoctor() {
@@ -65,7 +65,7 @@ function drawTableDoctor(doctores){
                       <td>${doctor.name}</td>
                       <td>${doctor.lastname}</td>
                       <td>${doctor.name_especialidad}</td>
-                      <td><a href="../html/editCitas.html?id=${doctor.id_doctor}">
+                      <td><a href="../html/editDoctores.html?id=${doctor.id_doctor}">
                       <img src="../images/edit_4511659.png" style="height: 20px; width: 30px;"></a></td>`;
       tbody.appendChild(tr); 
       console.log(tbody);
@@ -83,9 +83,45 @@ async function conectarDoctores(){
   console.log(response);
 }
 
+async function loadPacientes(){
+  try{
+    const response = await fetch('../php/getPatient.php'); 
+    if(!response.ok){
+    }
+    let data = await response.json(); 
+    return data;
+}catch(error){
+    console.error('Error fetching pacientes:', error); 
+    return ({error:'error'});
+}
+}
+
+function drawTablePatient(pacientes){
+  try {
+    const tbody = document.getElementById("printPatient");
+  pacientes.forEach(paciente => {
+    console.log(paciente);
+      let tr = document.createElement("tr"); 
+      tr.innerHTML = `<td>${paciente.id_paciente}</td>
+                      <td>${paciente.name}</td>
+                      <td>${paciente.lastname}</td>
+                      <td>${paciente.phoneNumber}</td>
+                      <td>${paciente.emergencyNumber}</td>
+                      <td><a href="../html/editPaciente.html?id=${paciente.id_paciente}">
+                      <img src="../images/edit_4511659.png" style="height: 20px; width: 30px;"></a></td>`;
+      tbody.appendChild(tr); 
+      console.log(tbody);
+  }); 
+  } catch (error) {
+    console.log(error);
+  }
+} 
 
 async function conectarPaciente(){
-  loadContent(['pagina.php','paciente.html'], 'content');
+  loadContent(['../html/paciente.html'], 'content');
+  let response = await loadPacientes(); 
+  await drawTablePatient(response);
+  console.log(response);
 }
 
 async function loadCitas() {
@@ -126,7 +162,9 @@ async function loadCitas() {
  } 
  //cargar información y dubijar la tabla inicial
 
-
+ function closeE() {
+  window.location.href = "../index.html"; 
+}
 
 
 async function conectarCitas(){
@@ -134,6 +172,9 @@ async function conectarCitas(){
   let response = await loadCitas(); 
   await drawTable(response);
   console.log(response);
+}
+function conectarEditar(){
+loadContent(['../html/editCitas.html'],'contentE')
 }
 /*
   let activeInput = null;
