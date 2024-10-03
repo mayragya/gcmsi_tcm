@@ -29,7 +29,7 @@ function loadAppointmentById(id) {
 }
 
 // Llamar a la función con un ID específico 
-
+loadAppointmentById(id);
 });
 
 
