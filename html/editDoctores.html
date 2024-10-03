@@ -1,14 +1,13 @@
-  <!-- Pop-up Formulario Edicion -->
-  <div id="popupE1" class="popup">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup()">&times;</span>
-      <h2>MEDICO EDICION</h2>
-      <form action="/php/createDoctor.php" method="POST" enctype="multipart/form-data">
+<link rel="stylesheet" href="../css/index.css">
+<section>
+<div  class="popupEdit">
+  <div class="popup-content">
+      <span class="close" onclick="closeE()">&times;</span>
+      <h2>EDITAR REGISTRO DE MEDICO</h2>
+      <form action="/php/updateDoctor.php" method="POST" enctype="multipart/form-data">
+        <input type="hidden" id="id_doctor" name="id_doctor">
         <label for="nombre1">Nombre:</label>
         <input type="text" id="nombre1" name="nombre1" required><br><br>
-        <label for="nombre1">Nombre:</label>
-        <input type="text" id="nombre1" name="nombre1" required><br><br>
-  
         <label for="apellido1">Apellido:</label>
         <input type="text" id="apellido1" name="apellido1" required><br><br>
   
@@ -18,7 +17,11 @@
           <option value="2">Pediatra</option>
           <option value="3">Dentista</option>
         </select><br><br>
-        <button type="submit">Enviar</button>
+        <button type="submit">Guardar</button>
+        <button type="button" onclick="DeleteDoctor()">Eliminar</button>
       </form>
     </div>
    </div>
+</section>
+<script src="../js/index.js"></script>
+<script src="../js/populateFormDoctor.js"></script>

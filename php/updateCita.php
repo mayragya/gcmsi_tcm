@@ -60,7 +60,7 @@ if ($conn->connect_error) {
         }
         $stmt->close();
 
-        // Insertar elementos en la tabla 
+        // actualizar elementos en la tabla 
         $sql = "UPDATE citas SET paciente = ?, doctor = ?, especialidad = ?, hora_cita = ?, fecha_cita = ? WHERE id_cita = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("iiissi", $id_paciente, $id_doctor, $id_especialidad, $hour, $date, $id_cita);

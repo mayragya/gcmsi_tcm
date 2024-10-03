@@ -28,8 +28,7 @@ function loadAppointmentById(id) {
         });
 }
 
-// Llamar a la función con un ID específico (ejemplo: 1)
-loadAppointmentById(id);
+// Llamar a la función con un ID específico 
 
 });
 
