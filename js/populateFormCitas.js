@@ -5,7 +5,7 @@ const params = new URLSearchParams(window.location.search);
 const id = params.get('id'); // Obtener el valor del parámetro 'id'
 // Función para cargar los datos de la cita seleccionada por ID
 function loadAppointmentById(id) {
-    fetch('../php/GetDataAppointment.php?id=' + id)
+    fetch('../php/getDataAppointment.php?id=' + id)
         .then(response => response.json())
         .then(cita => {
             if (cita.id !== "0" && cita) {

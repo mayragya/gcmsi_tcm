@@ -35,4 +35,5 @@ document.addEventListener('DOMContentLoaded', function(){
             tbody.appendChild(tr); 
         }); 
     }
+    
 }); 
