@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function(){
     liCitas.addEventListener("click", async function(e){
        await loadCitas();
     });
-   var citas = []; 
+   var citas = [];  
 
    async function loadCitas() {
        try {
